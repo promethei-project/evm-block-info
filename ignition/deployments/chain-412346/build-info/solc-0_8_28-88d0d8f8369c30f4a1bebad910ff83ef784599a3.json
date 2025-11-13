@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-88d0d8f8369c30f4a1bebad910ff83ef784599a3",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/BlockInfo.sol": "project/contracts/BlockInfo.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/BlockInfo.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.28;\n\ncontract BlockInfo {\n  function blockInfo() public view returns (uint256, bytes32[256] memory) {\n    bytes32[256] memory hashes;\n    for (uint256 i=0; i<256; i++) {\n      hashes[i] = blockhash(block.number-256+i);\n    }\n    return (block.number, hashes);\n  }\n}\n"
+      }
+    }
+  }
+}

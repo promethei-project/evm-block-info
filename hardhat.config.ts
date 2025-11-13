@@ -34,6 +34,12 @@ export default defineConfig({
       url: configVariable("SEPOLIA_RPC_URL"),
       accounts: [configVariable("SEPOLIA_PRIVATE_KEY")],
     },
+    archivistDevnet: {
+      type: "http",
+      chainType: "op",
+      url: "https://rpc.devnet.archivist.storage/",
+      accounts: [configVariable("ARCHIVIST_TESTNET_PRIVATE_KEY")]
+    },
     archivistTestnet: {
       type: "http",
       chainType: "op",
