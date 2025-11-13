@@ -1,6 +1,6 @@
 import { network } from "hardhat"
 
-const { ethers } = await network.connect("archivistTestnet")
+const { ethers } = await network.connect()
 
 const address = "0x95658FdA29e3b547107c95c11dD5e4a1A034C4AB"
 const contract = await ethers.getContractAt("BlockInfo", address)
