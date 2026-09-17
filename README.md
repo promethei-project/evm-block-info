@@ -5,7 +5,7 @@ Quick and dirty tool for inspecting the block number and block hashes that are a
 Set the private key of your ethereum account:
 
 ```bash
-npx hardhat keystore set ARCHIVIST_TESTNET_PRIVATE_KEY <key>
+npx hardhat keystore set PROMETHEI_TESTNET_PRIVATE_KEY <key>
 ```
 
 #### Deploy contract ####
@@ -20,4 +20,4 @@ npx hardhat deploy --network <network>
 npx hardhat run scripts/print-block-info.js --network <network>
 ```
 
-Where network is `archivistTestnet` or `archivistDevnet`.
+Where network is `prometheiTestnet` or `prometheiDevnet`.
